@@ -1,27 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-<h1 style="margin-left: 45%;">
-    ~ To-Do List ~
-</h1>
-<hr>
 
-<br>
+  <h1>To Do List</h1>
 
-<input type="text" placeholder="Add your agenda for today" id="todoinput"> 
-<button id="addbtn" onclick="addBtn()">Add</button>
+  <hr>
+  <input type="text" id="todoinput" placeholder="Add your agenda for today"><br>
+  <button onclick="addBtn()">Add</button>
+  <ul id="list"></ul>
 
-
-<div id="list">
-    
-</div>
-
-    <script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

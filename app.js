@@ -1,12 +1,44 @@
-function addBtn() {
-    let input = document.getElementById("todoinput").value;
-    let list = document.getElementById("list").innerHTML += `<ul><li>${input} <button onclick="edit()" style="margin-left:3px;">Edit</button> <button onclick="edit()" style="margin-left:3px;">Delete</button></li>`;
-}
- function edit() {
-    list.innerHTML = `<br><input type="text" placeholder="Add your agenda for today" id="todoinput"><button onclick="add()">Change</button>`   
- }
+ function addBtn() {
+      let input = document.getElementById("todoinput");
+      let value = input.value.trim();
 
- function add(){
-    let add = document.getElementById("todoinput").value;
-    list.innerHTML = `<br> <li>${add}</li>`
- }
+      if (value === "") return; // ignore empty inputs
+
+      let ul = document.getElementById("list");
+
+      let li = document.createElement("li");
+      li.innerHTML = `
+        <span>${value}</span>
+        <button onclick="editItem(this)" style="margin-left:5px;">Edit</button>
+        <button onclick="deleteItem(this)" style="margin-left:5px;">Delete</button>
+      `;
+
+      ul.appendChild(li);
+      input.value = ""; // clear input
+    }
+
+    function editItem(button) {
+      let li = button.parentElement;
+      let span = li.querySelector("span");
+      let currentText = span.innerText;
+
+      let input = document.createElement("input");
+      input.type = "text";
+      input.value = currentText;
+
+      let saveBtn = document.createElement("button");
+      saveBtn.innerText = "Save";
+      saveBtn.onclick = function () {
+        span.innerText = input.value;
+        li.replaceChild(span, input);
+        li.replaceChild(button, saveBtn);
+      };
+
+      li.replaceChild(input, span);
+      li.replaceChild(saveBtn, button);
+    }
+
+    function deleteItem(button) {
+      let li = button.parentElement;
+      li.remove();
+    }
