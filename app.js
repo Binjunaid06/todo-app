@@ -2,7 +2,7 @@
       let input = document.getElementById("todoinput");
       let value = input.value.trim();
 
-      if (value === "") return; // ignore empty inputs
+      if (value === "") return; 
 
       let ul = document.getElementById("list");
 
@@ -14,7 +14,7 @@
       `;
 
       ul.appendChild(li);
-      input.value = ""; // clear input
+      input.value = ""; 
     }
 
     function editItem(button) {

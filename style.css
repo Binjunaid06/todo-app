@@ -1,4 +1,4 @@
-/* General body and page layout */
+
 body {
     font-family: 'Segoe UI', 'Arial', sans-serif;
     background-color: #f0f2f5;
@@ -10,14 +10,14 @@ body {
     line-height: 1.6;
 }
 
-/* Main heading */
+
 h1 {
     color: #1a73e8;
     font-weight: 300;
     margin-bottom: 1rem;
 }
 
-/* Horizontal line for separation */
+
 hr {
     width: 100%;
     max-width: 500px;
@@ -27,7 +27,6 @@ hr {
     margin: 1rem 0 2rem;
 }
 
-/* Input and main button styling */
 #todoinput {
     flex-grow: 1;
     padding: 0.75rem;
@@ -58,7 +57,6 @@ button:hover {
     background-color: #1565c0;
 }
 
-/* To-do list container */
 #list {
     list-style-type: none;
     padding: 0;
@@ -70,7 +68,7 @@ button:hover {
     margin-top: 2rem;
 }
 
-/* Individual list item */
+
 li {
     display: flex;
     justify-content: space-between;
@@ -95,9 +93,8 @@ li span {
     margin-right: 1rem;
 }
 
-/* Edit and Delete buttons */
 .btn-group {
-    white-space: nowrap; /* Prevents buttons from wrapping */
+    white-space: nowrap; 
 }
 
 li button {
@@ -108,7 +105,7 @@ li button {
 }
 
 li .edit-btn {
-    background-color: #fbbc05; /* Yellow for edit */
+    background-color: #fbbc05; 
 }
 
 li .edit-btn:hover {
@@ -116,14 +113,13 @@ li .edit-btn:hover {
 }
 
 li .delete-btn {
-    background-color: #ea4335; /* Red for delete */
+    background-color: #ea4335; 
 }
 
 li .delete-btn:hover {
     background-color: #d93025;
 }
 
-/* Edit input field styling */
 li input[type="text"] {
     flex-grow: 1;
     padding: 0.5rem;
